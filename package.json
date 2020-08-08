@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/vitaliisotnichenko/otus-qajs-course/issues"
   },
-  "homepage": "https://github.com/vitaliisotnichenko/otus-qajs-course#readme"
+  "homepage": "https://github.com/vitaliisotnichenko/otus-qajs-course#readme",
+  "dependencies": {
+    "codeceptjs": "^2.6.8",
+    "puppeteer": "^5.2.1"
+  }
 }

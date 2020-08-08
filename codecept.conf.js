@@ -1,11 +1,13 @@
 exports.config = {
-  tests: './*_test.js',
+  tests: './tests/*_test.js',
   output: './output',
+  timeout: 10000,
   helpers: {
     Puppeteer: {
-      url: 'http://localhost',
+      url: 'http://todomvc.com/examples/emberjs',
       show: true,
-      windowSize: '1200x900'
+      windowSize: '1200x900',
+      waitForNavigation: 'networkidle0',
     }
   },
   include: {
