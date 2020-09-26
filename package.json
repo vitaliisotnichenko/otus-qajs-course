@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/vitaliisotnichenko/otus-qajs-course#readme",
   "dependencies": {
+    "Faker": "^0.7.2",
     "codeceptjs": "^2.6.8",
+    "dotenv": "^8.2.0",
+    "faker": "^5.1.0",
     "puppeteer": "^5.2.1"
   }
 }
