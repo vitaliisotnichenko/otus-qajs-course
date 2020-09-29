@@ -9,12 +9,7 @@ Scenario('Successfull signup on the website', async () => {
     const user = faker.internet.userName()
     const password = faker.internet.password()
     const email = faker.internet.email()
-    console.log(user)
-    I.fillField(signupPO.locators.username, user)
-    I.fillField(signupPO.locators.email, email)
-    I.fillField(signupPO.locators.password, password)
-    I.fillField(signupPO.locators.confirmPassword, password)
-    I.click(signupPO.locators.signup)
+    signupPO.fillSignUpForm(user, password, email)
     I.see(`Hi ${user}!`)
     
 })
@@ -22,9 +17,7 @@ Scenario('Successfull signup on the website', async () => {
 Scenario('Successfull login on the website', async () => {
     I.amOnPage('https://try.vikunja.io/login')
     const credentials = "demo"
-    I.fillField(loginPO.locators.username, credentials)
-    I.fillField(loginPO.locators.password, credentials)
-    I.click(loginPO.locators.loginButton)
+    loginPO.fillLoginForm(credentials)
     I.see(`Hi ${credentials}`)
   
 })
