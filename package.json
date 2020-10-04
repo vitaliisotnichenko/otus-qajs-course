@@ -1,27 +1,42 @@
 {
-  "name": "otus-qajs-course",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vitaliisotnichenko/otus-qajs-course.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vitaliisotnichenko/otus-qajs-course/issues"
-  },
-  "homepage": "https://github.com/vitaliisotnichenko/otus-qajs-course#readme",
-  "dependencies": {
-    "Faker": "^0.7.2",
-    "codeceptjs": "^2.6.8",
-    "dotenv": "^8.2.0",
-    "faker": "^5.1.0",
-    "puppeteer": "^5.2.1"
-  }
+    "name": "otus-qajs-course",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "codeceptjs": "codeceptjs run --steps",
+        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+        "codeceptjs:ui": "codecept-ui --app",
+        "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vitaliisotnichenko/otus-qajs-course.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/vitaliisotnichenko/otus-qajs-course/issues"
+    },
+    "homepage": "https://github.com/vitaliisotnichenko/otus-qajs-course#readme",
+    "dependencies": {
+        "Faker": "^0.7.2",
+        "dotenv": "^8.2.0",
+        "faker": "^5.1.0",
+        "puppeteer": "^5.2.1",
+        "webdriverio": "^6.0.0",
+        "allure-commandline": "2.13.0",
+        "codeceptjs-chai": "^2.2.0"
+    },
+    "devDependencies": {
+        "@codeceptjs/configure": "^0.5.2",
+        "@codeceptjs/examples": "^1.2.1",
+        "@codeceptjs/ui": "^0.4.1",
+        "codeceptjs": "^3.0.0",
+        "playwright": "^1.4.2"
+    }
 }

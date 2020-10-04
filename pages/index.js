@@ -1,4 +1,6 @@
 module.exports = {
-    signupPO: __dirname + '/signupPO.js',
-    loginPO: __dirname + '/loginPO.js',
+    homePO: __dirname + '/homePO.js',
+    signInPO: __dirname + '/signInPO.js',
+    accountCreationPO: __dirname + '/accountCreationPO.js',
+    contactUsPO: __dirname + '/contactUsPO.js'
 }

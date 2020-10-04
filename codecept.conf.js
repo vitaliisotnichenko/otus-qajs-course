@@ -2,20 +2,25 @@ require('dotenv').config();
 const pages = require('./pages')
 
 exports.config = {
-  tests: "./tests/*_test.js",
-  output: "./output",
+  tests: "./tests/**/*_test.js",
+  output: "./output/allure",
   timeout: 10000,
   helpers: {
-    Puppeteer: {
-      url: "https://try.vikunja.io",
-      show: true,
-      windowSize: "1200x900",
-      waitForNavigation: "networkidle0",
+    Webdriver: {
+      url: process.env.BASE_URL,
+      browser: 'chrome',
+      restart: true,
+      host: 'localhost',
+      port: 4444,
+      protocol: "http",
+      windowSize: "1600X1080"
+
     },
     REST: {},
   },
   include: {
-    I: "./steps_file.js",
+    // I: "./steps_file.js",
+    routes: "./lib/utils/routes.js",
     ...pages
   },
   bootstrap: null,
@@ -28,6 +33,21 @@ exports.config = {
     screenshotOnFail: {
       enabled: true,
     },
+    allure: {
+      enabled: true,
+      outputDir: './output/allure'
+    },
+    selenoid: {
+      enabled: true,
+      deletePassed: false,
+      autoCreate: false,
+      autStart: false,
+      sessionTimeout: "20m",
+      enableVideo: false,
+      enableLog: true,
+      enableVNC: true
+
+    }
   },
 };
 
