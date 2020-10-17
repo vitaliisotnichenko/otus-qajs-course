@@ -3,6 +3,7 @@ Feature: Business rules
   As a persona
   I want to be able to interact with a system
 
-  Scenario: do something
+  Scenario: sign up to the website
     Given I have a defined step
     When  I create account
+    Then  I am signed up

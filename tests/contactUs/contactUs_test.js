@@ -1,5 +1,5 @@
 const { I, routes, homePO, contactUsPO } = inject ()
-const faker = require('Faker')
+const faker = require('faker')
 
 Feature('Contac Us form')
 
@@ -8,7 +8,7 @@ Before (() => {
 })
 
 Scenario('Send contact us form', () => {
-    const textMessage = faker.lorem.sentences(4)
+    const textMessage = faker.lorem.sentence(4)
     I.click(homePO.locators.contactUsButton)
     contactUsPO.sendMessage(textMessage)
     I.see('Your message has been successfully sent to our team.')

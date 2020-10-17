@@ -1,5 +1,5 @@
 const { I, routes, homePO, signInPO , accountCreationPO} = inject();
-const faker = require('Faker')
+const faker = require('faker')
 // Add in your custom step files
 
 Given('I have a defined step', () => {

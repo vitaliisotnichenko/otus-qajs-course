@@ -24,13 +24,14 @@
     },
     "homepage": "https://github.com/vitaliisotnichenko/otus-qajs-course#readme",
     "dependencies": {
+        "@testomatio/reporter": "^0.1.16",
         "Faker": "^0.7.2",
+        "allure-commandline": "2.13.0",
+        "codeceptjs-chai": "^2.2.0",
         "dotenv": "^8.2.0",
         "faker": "^5.1.0",
         "puppeteer": "^5.2.1",
-        "webdriverio": "^6.0.0",
-        "allure-commandline": "2.13.0",
-        "codeceptjs-chai": "^2.2.0"
+        "webdriverio": "^6.0.0"
     },
     "devDependencies": {
         "@codeceptjs/configure": "^0.5.2",

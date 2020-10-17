@@ -1,5 +1,5 @@
 const { I, routes, homePO, signInPO , accountCreationPO} = inject()
-const faker = require('Faker')
+const faker = require('faker')
 
 Feature("Sign In feature")
 
@@ -8,12 +8,12 @@ Before(() => {
 })
 
 Scenario("Sign In to the website", async () => {
-    const email = faker.internet.email()
-    const firstName = faker.name.firstName()
-    const lastName = faker.name.lastName()
-    const address = faker.address.streetAddress()
-    const city = faker.address.city()
-    const phone = faker.phone.phoneNumber()
+    const email = internet.email()
+    const firstName = name.firstName()
+    const lastName = name.lastName()
+    const address = _address.streetAddress()
+    const city = _address.city()
+    const phone = _phone.phoneNumber()
     I.click(homePO.locators.signInButton)
     signInPO.createAccount(email)
     I.waitForElement(accountCreationPO.locators.accountCreationForm, process.env.TIMEOUT)
